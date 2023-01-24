@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+  }
+  :root{
+    --ow-orange: #FA9C1D;
+    --ow-white:  #f0f0f0;
+    --ow-black: #4A4C4E;
+}
+
+.card-wrap{
+    display:flex;
+    width: 190px;
+    height: 254px;
+    border-radius: 10px;
+    perspective: 600px;
+    flex-wrap: wrap;
+}
+
+.card{
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    width: 190px;
+    height: 254px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.5s;
+    margin: 20px 10px 20px 10px
+}
+
+.card.is-flipped {
+ transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 190px;
+    height: 254px;
+    border-radius: 10px;
+    background-color: var(--ow-white);
+    text-align: center;
+    backface-visibility: hidden;
+  }
+
+
+   
+
+
+   
+.card__face--front .img {
+    display: flex;
+    object-fit:cover;
+    margin: 30px auto 10px auto;
+    width: 70px;
+    height: 70px;
+    background-color: var(--ow-black);
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+   }
+   
+
+
+.card__face--front:hover{
+    background-color: var(--ow-black);
+    transition: all 0.5s;
+}
+
+.card__face--back{
+     background: var(--ow-black);
+     transform: rotateY(180deg);
+     
+}
+
+  
